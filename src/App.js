@@ -33,7 +33,7 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/about'} element={<About />} />
               <Route exact path={process.env.PUBLIC_URL + '/skills'} element={<Skills />} />
               <Route exact path={process.env.PUBLIC_URL + '/works'} element={<Works />} />
-              <Route exact path={process.env.PUBLIC_URL + '/error'} element={<Error />} />
+              <Route exact path="*" element={<Error />} />
             </Routes>
           </AnimatePresence>
         </Suspense>
