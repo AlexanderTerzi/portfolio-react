@@ -9,9 +9,9 @@ import Loading from '../UI/Loading';
 
 const SocialIcons = lazy(() => import('../UI/SocialIcons'))
 const HomeButton = lazy(() => import('../UI/HomeButton'))
-const Logo = lazy(() => import('../UI/Logo'))
-const ParticlesComponent = lazy(() => import('../UI/ParticlesComponent'))
-const BigTitle = lazy(() => import('../UI/BigTitle'))
+const Logo = lazy(() => import('../UI/Logo'));
+const ParticlesComponent = lazy(() => import('../UI/ParticlesComponent'));
+const BigTitle = lazy(() => import('../UI/BigTitle'));
 
 const Wrapper = styled(motion.div)`
   background: rgb(0,0,0);
