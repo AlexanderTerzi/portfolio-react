@@ -16,7 +16,7 @@ const HomeButton = lazy(() => import("../UI/HomeButton"));
 const Logo = lazy(() => import("../UI/Logo"));
 
 const Wrapper = styled(motion.div)`
- background: rgb(82,255,166);
+  background: rgb(82,255,166);
   background: linear-gradient(90deg, rgba(82,255,166,0.7567401960784313) 0%, rgba(100,163,189,0.5550595238095238) 50%);
   width: 100vw;
   height: 100vh;

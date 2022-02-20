@@ -15,7 +15,7 @@ const BigTitle = lazy(() => import('../UI/BigTitle'))
 
 const Wrapper = styled(motion.div)`
   background: rgb(0,0,0);
-background: linear-gradient(119deg, rgba(0,0,0,1) 0%, rgba(25,25,56,1) 56%);
+  background: linear-gradient(119deg, rgba(0,0,0,1) 0%, rgba(25,25,56,1) 56%);
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -53,7 +53,7 @@ const Main = styled(motion.div)`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   backdrop-filter: blur(4px);
   position: absolute;
   left: calc(5rem + 5vw);
@@ -63,6 +63,10 @@ const Main = styled(motion.div)`
 
   p:not(:last-child){
     margin-bottom: 15px;
+  }
+
+  a {
+    color: inherit;
   }
 
   ${mediaQueries(40)`
@@ -110,13 +114,18 @@ const About = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, adipisci minima quisquam totam officia soluta aut. Vero.
+              Hello! My name is Alexander Terzi. I am from Odessa, and I have been a Front-End developer since 2018.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, adipisci minima quisquam totam officia soluta aut. Vero.
+              EDUCATION:<br />
+              September 2003 – June 2008 Odessa National Polytechnic University, Power Engineering Institute, specialty - Nuclear power engineering, specialization - coolant technology and radioactive waste management at nuclear power plants.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, adipisci minima quisquam totam officia soluta aut. Vero.
+              COURSES  AND  CERTIFICATES: <br />
+              October 2018 courses “Web-developer: freelancer code” in <a href="https://wayup.in" target="_blank" rel="noreferrer">WayUp</a> Odessa.<br />
+              January 2021 courses “Javascript” in <a href="https://itgid.info/certificate/view?Certificate%5Buid%5D=jbm73jz5cz" target="_blank" rel="noreferrer">ItGid</a>.<br />
+              December 2021 courses “React JS” in <a href="https://itgid.info/certificate/view?Certificate%5Buid%5D=wvp41kzndn" target="_blank" rel="noreferrer">ItGid</a>.<br />
+
             </p>
           </Main>
           <BigTitle text='ABOUT' top='10%' left='5%' />

@@ -123,7 +123,6 @@ const Text = styled(motion.div)`
   font-size: calc(1rem + 1.5vw);
   color: ${(props) => props.theme.body};
   padding: 2rem;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -178,6 +177,14 @@ const CVLink = styled.a`
     }
 `;
 
+const LetterA = styled.span`
+  color: #52ffa6;
+`;
+
+const LetterT = styled.span`
+  color: #64a3bd;
+`;
+
 const Intro = () => {
 
   const [height, setHeight] = useState("55vh");
@@ -200,8 +207,8 @@ const Intro = () => {
       <Content>
         <Text initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'spring', duration: 2, delay: 1 }}>
           <h1>Hi,</h1>
-          <h3>I'm Alexander Terzi.</h3>
-          <h6>I Front-end Developer since 2018.</h6>
+          <h3>I'm <LetterA>A</LetterA>lexander <LetterT>T</LetterT>erzi.</h3>
+          <h6>I am a Front-end Developer since 2018.</h6>
           <CVLink href={CV} download>
             <FaFileDownload />
             <span>

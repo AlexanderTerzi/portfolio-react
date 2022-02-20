@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   height: 100vh;
   background: rgb(30,30,31);
   background: linear-gradient(90deg, rgba(30,30,31,1) 0%, rgba(65,63,66,1) 50%);
-  color: ${(props) => props.theme.body};
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
