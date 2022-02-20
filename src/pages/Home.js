@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
+import { ParticlesComponentMain } from "../UI/ParticlesComponent";
 
 import Intro from "../components/Intro";
 import Loading from "../UI/Loading";
@@ -94,6 +95,7 @@ const Home = () => {
         exit={path === "about" || path === "skills" ? moveY : moveX}
         transition={{ duration: 0.5 }}
       >
+        <ParticlesComponentMain />
         <DarkBlock clickSpinner={clickSpinner} />
         <Container>
           <Logo theme={clickSpinner ? "dark" : "light"} />

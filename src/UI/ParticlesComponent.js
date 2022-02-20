@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import ConfigDark from "../config/particlesjs-config.json";
 import ConfigLight from "../config/particlesjs-config-light.json";
+import ConfigMain from "../config/particlesjs-config-main.json";
 import Particles from "react-particles-js";
 
 const Wrapper = styled.div`
@@ -20,6 +21,17 @@ const ParticlesComponent = (props) => {
       <Particles
         style={{ position: "absolute", top: 0 }}
         params={props.theme === "light" ? ConfigLight : ConfigDark}
+      />
+    </Wrapper>
+  );
+};
+
+export const ParticlesComponentMain = () => {
+  return (
+    <Wrapper>
+      <Particles
+        style={{ position: "absolute", top: 0 }}
+        params={ConfigMain}
       />
     </Wrapper>
   );
