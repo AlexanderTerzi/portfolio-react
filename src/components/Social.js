@@ -1,7 +1,12 @@
-import React, { lazy } from 'react';
+import React, { lazy, useContext } from 'react';
+import { AppContext } from '../App';
+
 const SocialIcons = lazy(() => import("../UI/SocialIcons"));
 
-const Social = ({ mq, clickSpinner }) => {
+const Social = () => {
+
+    const { mq, clickSpinner } = useContext(AppContext);
+
     return (
         <>
             {mq ? (

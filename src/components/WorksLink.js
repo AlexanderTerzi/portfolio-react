@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
@@ -17,7 +18,10 @@ const Works = styled(NavLink)`
   }
 `;
 
-const WorksLink = ({ clickSpinner, setPath }) => {
+const WorksLink = () => {
+
+    const { clickSpinner, setPath } = useContext(AppContext);
+
     return (
         <Works clickSpinner={+clickSpinner} to={process.env.PUBLIC_URL + '/works'}>
             <motion.h2

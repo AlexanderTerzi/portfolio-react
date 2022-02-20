@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -23,7 +24,10 @@ const Title = styled(motion.h3)`
     }
 `;
 
-const ContactLink = ({ mq, clickSpinner }) => {
+const ContactLink = () => {
+
+    const { mq, clickSpinner } = useContext(AppContext);
+
     return (
         <>
             {mq ? (

@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { lazy, Suspense, createContext } from "react";
+import { lazy, Suspense, createContext, useState } from "react";
 import GlobalStyle from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./components/Themes";
@@ -19,8 +19,16 @@ export const AppContext = createContext({});
 function App() {
   const location = useLocation();
 
+  const [clickSpinner, setClickSpinner] = useState(false);
+
+  const handleClick = () => setClickSpinner(!clickSpinner);
+
+  const [path, setPath] = useState("");
+
+  const mq = window.matchMedia("(max-width: 50em)").matches;
+
   return (
-    <AppContext.Provider value={{}}>
+    <AppContext.Provider value={{ handleClick, setClickSpinner, clickSpinner, path, setPath, mq }}>
 
       <GlobalStyle />
 

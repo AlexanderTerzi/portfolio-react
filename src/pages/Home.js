@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 
 import Intro from "../components/Intro";
@@ -11,6 +11,7 @@ import ContactLink from "../components/ContactLink";
 import Social from "../components/Social";
 import WorksLink from '../components/WorksLink';
 import BottomLinks from "../components/BottomLinks";
+import { AppContext } from "../App";
 
 const HomeButton = lazy(() => import("../UI/HomeButton"));
 const Logo = lazy(() => import("../UI/Logo"));
@@ -74,10 +75,7 @@ const DarkBlock = styled.div`
 
 const Home = () => {
 
-  const [clickSpinner, setClickSpinner] = useState(false);
-  const [path, setPath] = useState("");
-
-  const handleClick = () => setClickSpinner(!clickSpinner);
+  const { clickSpinner, path } = useContext(AppContext);
 
   const moveY = {
     y: "-100%",
@@ -86,8 +84,6 @@ const Home = () => {
   const moveX = {
     x: `${path === "work" ? "100%" : "-100%"}`,
   };
-
-  const mq = window.matchMedia("(max-width: 50em)").matches;
 
   return (
     <Suspense fallback={<Loading />}>
@@ -102,11 +98,11 @@ const Home = () => {
         <Container>
           <Logo theme={clickSpinner ? "dark" : "light"} />
           <HomeButton />
-          <Social mq={mq} clickSpinner={clickSpinner} />
-          <CenterLogo clickSpinner={clickSpinner} handleClick={handleClick} mq={mq} />
-          <ContactLink mq={mq} clickSpinner={clickSpinner} />
-          <WorksLink clickSpinner={clickSpinner} setPath={setPath} />
-          <BottomLinks clickSpinner={clickSpinner} setPath={setPath} mq={mq} setClickSpinner={setClickSpinner} />
+          <Social />
+          <CenterLogo />
+          <ContactLink />
+          <WorksLink />
+          <BottomLinks />
         </Container>
         {clickSpinner ? <Intro clickSpinner={clickSpinner} /> : null}
       </Wrapper>

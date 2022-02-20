@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 import styled, { keyframes } from "styled-components";
 
 import { FaConnectdevelop } from "react-icons/fa";
@@ -65,7 +66,9 @@ const Click = styled.span`
   }
 `;
 
-const CenterLogo = ({ clickSpinner, handleClick, mq }) => {
+const CenterLogo = () => {
+
+  const { clickSpinner, handleClick, mq } = useContext(AppContext);
 
   return (
     <Center clickSpinner={clickSpinner}>
