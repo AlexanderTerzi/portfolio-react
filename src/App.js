@@ -6,11 +6,18 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./components/Themes";
 import Loading from "./UI/Loading";
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Skills = lazy(() => import("./pages/Skills"));
-const Works = lazy(() => import("./pages/Works"));
-const Error = lazy(() => import("./pages/Error"));
+import Home from "./pages/Home";
+import About from './pages/About';
+import Works from './pages/Works';
+
+import Skills from './pages/Skills';
+import Error from './pages/Error';
+
+// const Home = lazy(() => import("./pages/Home"));
+// const About = lazy(() => import("./pages/About"));
+// const Skills = lazy(() => import("./pages/Skills"));
+// const Works = lazy(() => import("./pages/Works"));
+// const Error = lazy(() => import("./pages/Error"));
 
 const SoundBar = lazy(() => import("./UI/SoundBar"));
 
