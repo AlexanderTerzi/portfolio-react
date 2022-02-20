@@ -19,7 +19,7 @@ const Works = styled(NavLink)`
 
 const WorksLink = ({ clickSpinner, setPath }) => {
     return (
-        <Works clickSpinner={+clickSpinner} to="/works">
+        <Works clickSpinner={+clickSpinner} to={process.env.PUBLIC_URL + '/works'}>
             <motion.h2
                 onClick={() => setPath("works")}
                 initial={{

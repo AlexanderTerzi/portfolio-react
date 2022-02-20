@@ -30,7 +30,7 @@ const BottomLinks = ({ clickSpinner, mq, setPath, setClickSpinner }) => {
             <About
                 onClick={() => setClickSpinner(false)}
                 clickSpinner={mq ? +false : +clickSpinner}
-                to="/about"
+                to={process.env.PUBLIC_URL + '/about'}
             >
                 <motion.h2
                     onClick={() => setPath("about")}
@@ -48,7 +48,7 @@ const BottomLinks = ({ clickSpinner, mq, setPath, setClickSpinner }) => {
                     About.
                 </motion.h2>
             </About>
-            <Skills to="/skills">
+            <Skills to={process.env.PUBLIC_URL + '/skills'}>
                 <motion.h2
                     onClick={() => setPath("skills")}
                     initial={{
@@ -65,7 +65,7 @@ const BottomLinks = ({ clickSpinner, mq, setPath, setClickSpinner }) => {
                     My Skills.
                 </motion.h2>
             </Skills>
-        </BottomBar>
+        </BottomBar >
     );
 };
 
