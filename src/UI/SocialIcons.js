@@ -1,10 +1,10 @@
-import { FaFacebook } from "react-icons/fa";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-
+import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
 import { DarkTheme, mediaQueries } from "../components/Themes";
+
+import { FaFacebook } from "react-icons/fa";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 
 const Icons = styled.div`
   display: flex;

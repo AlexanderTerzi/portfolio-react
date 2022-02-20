@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { lazy, Suspense, useState } from "react";
 import { motion } from "framer-motion";
@@ -16,7 +17,7 @@ const Logo = lazy(() => import("../UI/Logo"));
 
 const Wrapper = styled(motion.div)`
  background: rgb(82,255,166);
-background: linear-gradient(90deg, rgba(82,255,166,0.7567401960784313) 0%, rgba(100,163,189,0.5550595238095238) 50%);
+  background: linear-gradient(90deg, rgba(82,255,166,0.7567401960784313) 0%, rgba(100,163,189,0.5550595238095238) 50%);
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -52,7 +53,8 @@ const DarkBlock = styled.div`
   bottom: 0;
   right: 50%;
   width: ${(props) => (props.clickSpinner ? "50%" : "0%")};
-  background-color: #000000;
+  background: rgb(30,30,31);
+  background: linear-gradient(90deg, rgba(30,30,31,1) 0%, rgba(65,63,66,1) 50%);
   height: ${(props) => (props.clickSpinner ? "100%" : "0%")};
   transition: height 0.5s ease, width 1s ease 0.5s;
   z-index: 1;

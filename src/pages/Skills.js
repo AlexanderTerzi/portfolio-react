@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import styled, { ThemeProvider } from "styled-components";
 import { lazy, Suspense } from "react";
@@ -10,11 +11,11 @@ const SocialIcons = lazy(() => import("../UI/SocialIcons"));
 const HomeButton = lazy(() => import("../UI/HomeButton"));
 const Logo = lazy(() => import("../UI/Logo"));
 const ParticlesComponent = lazy(() => import("../UI/ParticlesComponent"));
-
 const BigTitle = lazy(() => import("../UI/BigTitle"));
 
-const Box = styled(motion.div)`
-  background-color: ${(props) => props.theme.body};
+const Wrapper = styled(motion.div)`
+  background: rgb(247,255,147);
+  background: linear-gradient(119deg, rgba(247,255,147,1) 0%, rgba(255,241,190,1) 100%);
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -41,6 +42,7 @@ const Box = styled(motion.div)`
 
 const Main = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.text};
+  border-radius: 14px;
   color: ${(props) => props.theme.text};
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
@@ -52,6 +54,7 @@ const Main = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.5s ease;
 
   ${mediaQueries(60)`
     height: 55vh;
@@ -63,8 +66,7 @@ const Main = styled(motion.div)`
   `};
 
   &:hover {
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
+    box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.4);
   }
 `;
 
@@ -96,12 +98,6 @@ const Title = styled.h2`
    }
   `};
 
-  ${Main}:hover & {
-    & > * {
-      fill: ${(props) => props.theme.body};
-    }
-  }
-
   & > *:first-child {
     margin-right: 1rem;
   }
@@ -111,10 +107,6 @@ const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
-
-  ${Main}:hover & {
-    color: ${(props) => props.theme.body};
-  }
 
   ${mediaQueries(50)`
     font-size: calc(0.8em + 1vw);
@@ -143,7 +135,7 @@ const Skills = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Suspense fallback={<Loading />}>
-        <Box
+        <Wrapper
           key="skills"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1 } }}
@@ -153,7 +145,6 @@ const Skills = () => {
           <HomeButton />
           <SocialIcons theme="light" />
           <ParticlesComponent theme="light" />
-
           <Main>
             <Title>
               <MdDeveloperMode size={40} /> Frontend Developer
@@ -161,7 +152,7 @@ const Skills = () => {
             <Description>
               <strong>Skills</strong> <br />
               <p>
-                HTML5, CSS3, Sass/SCSS, JavaScript, JQuery, React JS, REST API, Gulp 4, Bootstrap, GIT, WordPress, BEM methodology etc.
+                HTML5, CSS3, Sass/SCSS, JavaScript, React JS, REST API, Gulp 4, GIT, Bootstrap, JQuery, WordPress, BEM methodology etc.
               </p>
             </Description>
             <Description>
@@ -175,7 +166,7 @@ const Skills = () => {
             </Description>
           </Main>
           <BigTitle text="Skills" top="80%" right="30%" />
-        </Box>
+        </Wrapper>
       </Suspense>
     </ThemeProvider>
   );

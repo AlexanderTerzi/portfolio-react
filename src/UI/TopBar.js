@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import HomeButton from "./HomeButton";
 
-const Box = styled.div`
+const Wrapper = styled.div`
   position: fixed;
   width: 100%;
   height: 5rem;
@@ -11,10 +12,10 @@ const Box = styled.div`
 `;
 const TopBar = () => {
   return (
-    <Box>
+    <Wrapper>
       <Logo />
       <HomeButton />
-    </Box>
+    </Wrapper>
   );
 };
 

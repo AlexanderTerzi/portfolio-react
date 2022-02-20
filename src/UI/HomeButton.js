@@ -1,7 +1,9 @@
-import { FaHome } from "react-icons/fa";
+import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { mediaQueries } from "../components/Themes";
+
+import { FaHome } from "react-icons/fa";
 
 const Power = styled.button`
   position: fixed;
@@ -22,9 +24,9 @@ const Power = styled.button`
   transition: all 0.3s ease;
 
   &:hover {
-        background-color: #fff;
-        transform:translateX(-50%) scale(1.05);
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+      background-color: #fff;
+      transform:translateX(-50%) scale(1.05);
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
     }
 
   & > *:first-child {

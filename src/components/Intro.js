@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -7,7 +8,7 @@ import { FaFileDownload } from 'react-icons/fa';
 import Me from "../assets/images/Avatar.png";
 import CV from '../assets/files/CV_Alexander_Terzi.pdf';
 
-const Box = styled(motion.div)`
+const Wrapper = styled(motion.div)`
   width: 55vw;
   display: flex;
   background: linear-gradient(
@@ -26,6 +27,7 @@ const Box = styled(motion.div)`
   background-size: 100% 2px;
   border-left: 2px solid ${(props) => props.theme.body};
   border-right: 2px solid ${(props) => props.theme.text};
+  border-radius: 14px;
   z-index: 1;
   position: absolute;
   left: 50%;
@@ -78,7 +80,7 @@ const Box = styled(motion.div)`
   }
 `;
 
-const SubBox = styled.div`
+const Content = styled(motion.div)`
   width: 50%;
   position: relative;
   display: flex;
@@ -97,7 +99,6 @@ const SubBox = styled.div`
       .avatar {
         width: 70%;
       }
-
   `};
 
   ${mediaQueries(40)`
@@ -110,7 +111,6 @@ const SubBox = styled.div`
       .avatar {
         width: 90%;
       }
-
   `};
   ${mediaQueries(20)`
      .avatar {
@@ -146,12 +146,12 @@ const Text = styled(motion.div)`
   `};
 `;
 
-const CVLink = styled(motion.a)`
+const CVLink = styled.a`
     font-size: 16px !important;
     cursor: pointer;
     width: 10rem;
     margin-top:17px;
-    background: ${props => props.theme.body};
+    background: #52ffa6;
     color: ${props => props.theme.text} !important;
     border: none;
     display: flex;
@@ -160,9 +160,17 @@ const CVLink = styled(motion.a)`
     text-decoration: none;
     transition: all 0.5s ease;
     padding: 0.5em;
+    border-radius: 4px;
     
+    svg {
+      transition: all 0.5s ease;
+    }
+
     &:hover {
         transform: scale(1.05);
+        svg {
+          transform: rotate(360deg)
+        }
     }
 
     span {
@@ -184,34 +192,30 @@ const Intro = () => {
   }, []);
 
   return (
-    <Box
+    <Wrapper
       initial={{ height: 0 }}
       animate={{ height: height }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
-      <SubBox>
-        <Text>
+      <Content>
+        <Text initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'spring', duration: 2, delay: 1 }}>
           <h1>Hi,</h1>
           <h3>I'm Alexander Terzi.</h3>
           <h6>I Front-end Developer since 2018.</h6>
-          <CVLink href={CV} download initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'spring', duration: 2, delay: 1 }}>
+          <CVLink href={CV} download>
             <FaFileDownload />
             <span>
-              Download my CV1
+              Download my CV
             </span>
           </CVLink>
         </Text>
-      </SubBox>
-      <SubBox>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
+      </Content>
+      <Content>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2 }} >
           <img className="avatar" src={Me} alt="Me" />
         </motion.div>
-      </SubBox>
-    </Box>
+      </Content>
+    </Wrapper>
   );
 };
 

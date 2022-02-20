@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from "styled-components";
 
 import { FaConnectdevelop } from "react-icons/fa";
+import { FaLongArrowAltUp } from 'react-icons/fa';
 
 const rotate = keyframes`
 from {
@@ -31,7 +32,7 @@ const Center = styled.button`
   }
 
   & > *:last-child {
-    display: ${(props) => (props.clickSpinner ? "none" : "inline-block")};
+    display: ${(props) => (props.clickSpinner ? "none" : "flex")};
     padding-top: 1rem;
   }
 
@@ -48,26 +49,44 @@ const Center = styled.button`
   }
 `;
 
+const pulse = keyframes`
+  0% { transform: translateY(-2px)}
+  50% { transform: translateY(2px)}
+  100% { transform: translateY(-2px)}
+`;
+
+const Click = styled.span`
+  align-items: center;
+  span {
+    margin: 7px;
+  }
+  svg {
+    animation: ${pulse} infinite 1s ease;
+  }
+`;
+
 const CenterLogo = ({ clickSpinner, handleClick, mq }) => {
 
-    return (
-        <Center clickSpinner={clickSpinner}>
-            {mq ? (
-                <FaConnectdevelop
-                    onClick={handleClick}
-                    size={clickSpinner ? 80 : 150}
-                    fill="currentColor"
-                />
-            ) : (
-                <FaConnectdevelop
-                    onClick={handleClick}
-                    size={clickSpinner ? 120 : 200}
-                    fill="currentColor"
-                />
-            )}
-            <span>click here</span>
-        </Center>
-    );
+  return (
+    <Center clickSpinner={clickSpinner}>
+      {mq ? (
+        <FaConnectdevelop
+          onClick={handleClick}
+          size={clickSpinner ? 80 : 150}
+          fill="currentColor"
+        />
+      ) : (
+        <FaConnectdevelop
+          onClick={handleClick}
+          size={clickSpinner ? 120 : 200}
+          fill="currentColor"
+        />
+      )}
+      <Click>
+        <span>click here</span><FaLongArrowAltUp />
+      </Click>
+    </Center>
+  );
 };
 
 export default CenterLogo;

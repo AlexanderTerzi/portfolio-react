@@ -17,6 +17,7 @@ const Contact = styled.a`
 const Title = styled(motion.h3)`
     display: flex;
     align-items: center;
+
     svg {
         margin-right: 7px;
     }
@@ -31,7 +32,7 @@ const ContactLink = ({ mq, clickSpinner }) => {
                     target="_blank"
                     href="mailto:sanyagts@gmail.com"
                 >
-                    <motion.h3
+                    <Title
                         initial={{
                             y: -200,
                             transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -43,8 +44,8 @@ const ContactLink = ({ mq, clickSpinner }) => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        Say hi..
-                    </motion.h3>
+                        <MdEmail /> Say hi..
+                    </Title>
                 </Contact>
             ) : (
                 <Contact

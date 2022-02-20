@@ -1,9 +1,10 @@
+import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { AiFillGithub } from "react-icons/ai";
 import { mediaQueries } from "../components/Themes";
 
-const Box = styled(motion.li)`
+const Wrapper = styled(motion.li)`
   width: 16rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
@@ -16,11 +17,9 @@ const Box = styled(motion.li)`
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.body};
 
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   &:hover {
-    background-color: ${(props) => props.theme.body};
-    color: ${(props) => props.theme.text};
-    border: 1px solid ${(props) => props.theme.text};
+    box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.4);
   }
 
   ${mediaQueries(50)`
@@ -72,9 +71,6 @@ const Tags = styled.div`
   padding-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  ${Box}:hover & {
-    border-top: 2px solid ${(props) => props.theme.text};
-  }
 `;
 
 const Tag = styled.span`
@@ -93,30 +89,26 @@ const Footer = styled.div`
 `;
 
 const Demo = styled.a`
-  background-color: ${(props) => props.theme.body};
+  background-color: #191938;
   color: ${(props) => props.theme.text};
   text-decoration: none;
   padding: 0.5rem calc(2rem + 2vw);
   border-radius: 0 0 0 50px;
   font-size: calc(1em + 0.5vw);
+  transition: all 0.5s ease;
 
-  ${Box}:hover & {
-    background-color: ${(props) => props.theme.text};
-    color: ${(props) => props.theme.body};
+  &:hover {
+    background-color: #323269;
   }
 `;
+
 const Git = styled.a`
   color: inherit;
   text-decoration: none;
 
-  ${Box}:hover & {
-    & > * {
-      fill: ${(props) => props.theme.text};
-    }
-  }
-
   svg {
       transition: all 0.5s ease;
+      fill: #191938;
       &:hover {
           transform: scale(1.1);
       }
@@ -124,8 +116,8 @@ const Git = styled.a`
 `;
 
 const item = {
-  hidden: { scale: 0 },
-  show: { scale: 1, transition: { type: "spring", duration: 0.5 } },
+  hidden: { scale: 0, opacity: 0 },
+  show: { scale: 1, opacity: 1, transition: { type: "tween", duration: 0.5 } },
 };
 
 const Card = (props) => {
@@ -133,7 +125,7 @@ const Card = (props) => {
   const { id, name, description, tags, demo, github } = props.data;
 
   return (
-    <Box key={id} variants={item}>
+    <Wrapper key={id} variants={item}>
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Tags>
@@ -149,7 +141,7 @@ const Card = (props) => {
           <AiFillGithub size={30} />
         </Git>
       </Footer>
-    </Box >
+    </Wrapper >
   );
 };
 

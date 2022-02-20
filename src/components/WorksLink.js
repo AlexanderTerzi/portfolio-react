@@ -33,7 +33,7 @@ const WorksLink = ({ clickSpinner, setPath }) => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >
-                Work
+                My Works
             </motion.h2>
         </Works>
     );

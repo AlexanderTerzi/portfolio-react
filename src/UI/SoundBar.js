@@ -1,10 +1,11 @@
+import React from "react";
 import { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 import music from "../assets/audio/audio.mp3";
 import { mediaQueries } from "../components/Themes";
 
-const Box = styled.div`
+const Wrapper = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
@@ -50,7 +51,7 @@ const Line = styled.span`
   background: ${(props) => props.theme.text};
   border: 1px solid ${(props) => props.theme.body};
   animation: ${play} 1s ease infinite;
-  animation-play-state: ${(props) => (props.click ? "running" : "paused")};
+  animation-play-state: ${(props) => (props.clickAudio ? "running" : "paused")};
   height: 1rem;
   width: 2px;
   margin: 0 0.1rem;
@@ -63,11 +64,11 @@ const Line = styled.span`
 
 const SoundBar = () => {
 
-  const [click, setClick] = useState(false);
+  const [clickAudio, setClickAudio] = useState(false);
 
-  const handleClick = () => {
-    setClick(!click);
-    if (!click) {
+  const handleClickAudio = () => {
+    setClickAudio(!clickAudio);
+    if (!clickAudio) {
       refAudio.current.play();
     } else {
       refAudio.current.pause();
@@ -77,14 +78,14 @@ const SoundBar = () => {
   const refAudio = useRef(null);
 
   return (
-    <Box onClick={() => handleClick()}>
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
+    <Wrapper onClick={handleClickAudio}>
+      <Line clickAudio={clickAudio} />
+      <Line clickAudio={clickAudio} />
+      <Line clickAudio={clickAudio} />
+      <Line clickAudio={clickAudio} />
+      <Line clickAudio={clickAudio} />
       <audio src={music} ref={refAudio} loop />
-    </Box>
+    </Wrapper>
   );
 };
 
