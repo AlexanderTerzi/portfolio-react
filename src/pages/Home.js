@@ -106,7 +106,7 @@ const Home = () => {
           <WorksLink />
           <BottomLinks />
         </Container>
-        {clickSpinner ? <Intro clickSpinner={clickSpinner} /> : null}
+        {clickSpinner && <Intro clickSpinner={clickSpinner} />}
       </Wrapper>
     </Suspense>
   );

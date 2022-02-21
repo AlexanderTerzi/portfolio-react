@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import HomeButton from '../UI/HomeButton';
 import BigTitle from '../UI/BigTitle';
+import Logo from '../UI/Logo';
+import ContactLink from '../components/ContactLink';
+import WorksLink from '../components/WorksLink';
+import BottomLinks from '../components/BottomLinks';
+import Social from '../components/Social';
 
 import { HiOutlineEmojiSad } from 'react-icons/hi';
 
@@ -34,6 +40,7 @@ const Text = styled.div`
 const Error = () => {
     return (
         <Wrapper>
+            <Logo theme="light" />
             <HomeButton />
             <Text>
                 Oops! <br />
@@ -42,6 +49,10 @@ const Error = () => {
                 </span>
             </Text>
             <BigTitle text="404" top="20%" right="30%" />
+            <ContactLink />
+            <WorksLink />
+            <BottomLinks />
+            <Social />
         </Wrapper>
     );
 };

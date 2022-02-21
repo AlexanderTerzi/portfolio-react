@@ -9,7 +9,6 @@ import Loading from "./UI/Loading";
 import Home from "./pages/Home";
 import About from './pages/About';
 import Works from './pages/Works';
-
 import Skills from './pages/Skills';
 import Error from './pages/Error';
 
