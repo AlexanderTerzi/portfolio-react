@@ -2,8 +2,8 @@
   "files": {
     "static/js/0.af2fb24f.chunk.js": "/portfolio-react/static/js/0.af2fb24f.chunk.js",
     "static/js/0.af2fb24f.chunk.js.map": "/portfolio-react/static/js/0.af2fb24f.chunk.js.map",
-    "main.js": "/portfolio-react/static/js/main.3d5c4f79.chunk.js",
-    "main.js.map": "/portfolio-react/static/js/main.3d5c4f79.chunk.js.map",
+    "main.js": "/portfolio-react/static/js/main.01434a57.chunk.js",
+    "main.js.map": "/portfolio-react/static/js/main.01434a57.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.f12dd0f1.js",
     "runtime-main.js.map": "/portfolio-react/static/js/runtime-main.f12dd0f1.js.map",
     "static/css/3.679831fc.chunk.css": "/portfolio-react/static/css/3.679831fc.chunk.css",
@@ -15,7 +15,7 @@
     "static/css/3.679831fc.chunk.css.map": "/portfolio-react/static/css/3.679831fc.chunk.css.map",
     "static/js/3.7e4e14a3.chunk.js.LICENSE.txt": "/portfolio-react/static/js/3.7e4e14a3.chunk.js.LICENSE.txt",
     "static/media/Avatar.25b357ed.png": "/portfolio-react/static/media/Avatar.25b357ed.png",
-    "static/media/CV_Alexander_Terzi.e6f96671.pdf": "/portfolio-react/static/media/CV_Alexander_Terzi.e6f96671.pdf",
+    "static/media/CV_Alexander_Terzi.022b994d.pdf": "/portfolio-react/static/media/CV_Alexander_Terzi.022b994d.pdf",
     "static/media/audio.e3cd349b.mp3": "/portfolio-react/static/media/audio.e3cd349b.mp3",
     "static/media/spaceman.5ec7fcfa.png": "/portfolio-react/static/media/spaceman.5ec7fcfa.png"
   },
@@ -23,6 +23,6 @@
     "static/js/runtime-main.f12dd0f1.js",
     "static/css/3.679831fc.chunk.css",
     "static/js/3.7e4e14a3.chunk.js",
-    "static/js/main.3d5c4f79.chunk.js"
+    "static/js/main.01434a57.chunk.js"
   ]
 }
