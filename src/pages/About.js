@@ -122,9 +122,10 @@ const About = () => {
             </p>
             <p>
               COURSES  AND  CERTIFICATES: <br />
-              October 2018 courses “Web-developer: freelancer code” in <a href="https://wayup.in" target="_blank" rel="noreferrer">WayUp</a> Odessa.<br />
-              January 2021 courses “Javascript” in <a href="https://itgid.info/certificate/view?Certificate%5Buid%5D=jbm73jz5cz" target="_blank" rel="noreferrer">ItGid</a>.<br />
-              December 2021 courses “React JS” in <a href="https://itgid.info/certificate/view?Certificate%5Buid%5D=wvp41kzndn" target="_blank" rel="noreferrer">ItGid</a>.<br />
+              October 2018 courses “Web-developer: freelancer code” in <a href="https://drive.google.com/file/d/1xu3A68SezkdCKYbtl70KFa8Z9Wo2Ep62/view?usp=share_link" target="_blank" rel="noreferrer">WayUp</a> Odessa.<br />
+              October 2021 English courses in <a href="https://drive.google.com/file/d/1DkNzkcfW27WW7Mn3a7Bvx_ylqVNNSscH/view?usp=share_link" target="_blank" rel="noreferrer">English Galaxy</a>.<br />
+              January 2021 courses “Javascript” in <a href="https://drive.google.com/file/d/1WtzdUozYYQnfqALWV445a_hmHrrIQp51/view?usp=share_link" target="_blank" rel="noreferrer">IT Gid</a>.<br />
+              December 2021 courses “React JS” in <a href="https://drive.google.com/file/d/1kPvCW6Edg-wFjqbqmBz0Np7oz6JrVWJQ/view" target="_blank" rel="noreferrer">IT Gid</a>.<br />
 
             </p>
           </Main>

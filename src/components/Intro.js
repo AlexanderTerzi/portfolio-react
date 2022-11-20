@@ -208,7 +208,7 @@ const Intro = () => {
         <Text initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'spring', duration: 2, delay: 1 }}>
           <h1>Hi,</h1>
           <h3>I'm <LetterA>A</LetterA>lexander <LetterT>T</LetterT>erzi.</h3>
-          <h6>I am a Front-end Developer since 2018.</h6>
+          <h6>I have been a Front-End developer since 2018.</h6>
           <CVLink href={CV} download>
             <FaFileDownload />
             <span>

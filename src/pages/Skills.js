@@ -152,7 +152,7 @@ const Skills = () => {
             <Description>
               <strong>Skills</strong> <br />
               <p>
-                HTML5, CSS3, Sass/SCSS, JavaScript, React JS, REST API, Gulp 4, GIT, Bootstrap, JQuery, WordPress, BEM methodology etc.
+                HTML5, CSS3, Sass/SCSS, JavaScript, React JS, Redux, TypeScript, REST API, Gulp 4, GIT, Bootstrap, WordPress, BEM methodology etc.
               </p>
             </Description>
             <Description>

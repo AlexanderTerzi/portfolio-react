@@ -1,6 +1,15 @@
 export const Portfolio = [
     {
         id: 1,
+        name: "Phone Store",
+        description: "SPA React website with multilanguage.",
+        tags: ["Redux", "TypeScipt", "SCSS"],
+
+        demo: "https://alexanderterzi.github.io/phone-store/",
+        github: "https://github.com/AlexanderTerzi/phone-store"
+    },
+    {
+        id: 2,
         name: "Проект Монтаж",
         description: "Multi-page website for a construction company, “turnkey”, Wordpress",
         tags: ["HTML5", "CSS3", "JavaScript"],
@@ -9,7 +18,7 @@ export const Portfolio = [
         github: "https://github.com/AlexanderTerzi/pm"
     },
     {
-        id: 2,
+        id: 3,
         name: "Shoes Store",
         description: "SPA website, shoes store",
         tags: ["React", "REST API", "SASS"],
@@ -19,7 +28,7 @@ export const Portfolio = [
 
     },
     {
-        id: 3,
+        id: 4,
         name: "Luxtrader",
         description: "Auction website, landing page",
         tags: ["HTML5", "JavaScript", "SCSS"],
@@ -28,7 +37,7 @@ export const Portfolio = [
         github: "https://github.com/AlexanderTerzi/Luxtrader"
     },
     {
-        id: 4,
+        id: 5,
         name: "Desire",
         description: "Multi-page website for furniture company",
         tags: ["HTML5", "JavaScript", "SCSS"],
@@ -37,7 +46,7 @@ export const Portfolio = [
         github: "https://github.com/AlexanderTerzi/desire"
 
     }, {
-        id: 5,
+        id: 6,
         name: "LOGO",
         description: "Online sporting goods store",
         tags: ["HTML5", "JavaScript", "SCSS"],
@@ -47,7 +56,7 @@ export const Portfolio = [
 
     },
     {
-        id: 6,
+        id: 7,
         name: "B&T Studio",
         description: "Multi-page website for an own web-studio, “turnkey”, Wordpress",
         tags: ["HTML5", "CSS3", "JavaScript"],
@@ -57,7 +66,7 @@ export const Portfolio = [
 
     },
     {
-        id: 7,
+        id: 8,
         name: "3i steklo",
         description: "Glass and mirror products landing page, “turnkey”, Wordpress",
         tags: ["HTML5", "CSS3", "JavaScript"],
@@ -67,7 +76,7 @@ export const Portfolio = [
 
     },
     {
-        id: 8,
+        id: 9,
         name: "Alfa Group",
         description: "Landing-page for a construction company",
         tags: ["HTML5", "CSS3", "JavaScript"],
@@ -77,7 +86,7 @@ export const Portfolio = [
 
     },
     {
-        id: 9,
+        id: 10,
         name: "Lucido",
         description: "Italian tile landing-page",
         tags: ["HTML5", "CSS3", "JavaScript"],
@@ -87,8 +96,8 @@ export const Portfolio = [
 
     },
     {
-        id: 10,
-        name: "Lucido",
+        id: 11,
+        name: "Nevaton",
         description: "Landing page, “turnkey”, Wordpress",
         tags: ["HTML5", "CSS3", "JavaScript"],
 
@@ -97,7 +106,7 @@ export const Portfolio = [
 
     },
     {
-        id: 11,
+        id: 12,
         name: "Super Cigarette",
         description: "Tobacco goods store",
         tags: ["HTML5", "CSS3", "JavaScript"],
