@@ -1,4 +1,13 @@
-export const Portfolio = [
+export const portfolio = [
+    {
+        id: 13,
+        name: "Crypto 24/7",
+        description: "Crypto agregation. SPA React website with multilanguage and themes",
+        tags: ["Redux", "TypeScipt", "Tailwind CSS"],
+
+        demo: "https://alexanderterzi.github.io/crypto-react/",
+        github: "https://github.com/AlexanderTerzi/crypto-react"
+    },
     {
         id: 1,
         name: "Phone Store",

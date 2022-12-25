@@ -4,7 +4,7 @@ import { useEffect, useRef, lazy, Suspense } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import { FaConnectdevelop } from "react-icons/fa";
-import { Portfolio } from "../data/PortfolioData";
+import { portfolio } from "../data/PortfolioData";
 import { DarkTheme, mediaQueries } from "../components/Themes";
 
 import Card from "../UI/Card";
@@ -124,7 +124,7 @@ const Works = () => {
           <HomeButton />
           <SocialIcons theme="dark" />
           <Main ref={mainRef} variants={container} initial="hidden" animate="show">
-            {Portfolio.map((d) => (
+            {portfolio.map((d) => (
               <Card key={d.id} data={d} />
             ))}
           </Main>
